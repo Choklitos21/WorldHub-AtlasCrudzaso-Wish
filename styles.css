@@ -1,6 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+/* Fonts */
+.set-text-font {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 
-/* CSS */
+.set-titles-font {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Color scheme */
 .color-1 {
   color: #8fbc8f;
 }
