@@ -1,4 +1,17 @@
-/* CSS */
+/* Fonts */
+.set-text-font {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.set-titles-font {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Color scheme */
 .color-1 {
   color: #8fbc8f;
 }
@@ -22,4 +35,15 @@
   --color-3: #c2e0a4;
   --color-4: #e4f2b1;
   --color-5: #f1f8e2;
+}
+
+:footer-colors {
+  --foot-1: #7fffd4;
+  --foot-2: #7fffd4;
+  --foot-3: #40e0d0;
+  --foot-4: #66cccc;
+}
+
+footer {
+  font-family: "Great Vibes", cursive;
 }
