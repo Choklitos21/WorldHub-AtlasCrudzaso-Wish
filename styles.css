@@ -100,7 +100,7 @@ body {
 }
 
 .garland-container {
-  background-image: url("aaa.png");
+  background-image: url("images/guirnalda.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1000px;
@@ -237,7 +237,6 @@ body {
   }
 }
 
-/* --- FOOTER --- */
 /* ========== FOOTER ========== */
 .fairy-footer {
   background: linear-gradient(135deg, #2c003e 0%, #4a0072 100%);
