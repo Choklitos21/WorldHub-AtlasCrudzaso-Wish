@@ -1,9 +1,3 @@
-/* --- ESTILOS GLOBALES --- */
-:root {
-  --color-text-nav: #ffffff; /* Blanco puro */
-  --color-hover-nav: #ff6bcd; /* Rosa en hover */
-}
-
 html,
 body {
   margin: 0;
@@ -11,6 +5,84 @@ body {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
+}
+
+/* Fonts */
+.set-text-font {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.set-titles-font {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-1);
+}
+
+/* Color scheme */
+.color-1 {
+  color: #8fbc8f;
+}
+.color-2 {
+  color: #a9d18f;
+}
+.color-3 {
+  color: #c2e0a4;
+}
+.color-4 {
+  color: #e4f2b1;
+}
+.color-5 {
+  color: #f1f8e2;
+}
+
+/* CSS Variables */
+:root {
+  --color-1: #8fbc8f;
+  --color-2: #a9d18f;
+  --color-3: #c2e0a4;
+  --color-4: #e4f2b1;
+  --color-5: #f1f8e2;
+}
+
+.fairies-icon-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fairies-icon-title img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.articles-style {
+  width: 85%;
+}
+
+.articles-style div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articles-style div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.articles-style h1 {
+  text-align: left;
+}
+
+/* --- ESTILOS GLOBALES --- */
+:root {
+  --color-text-nav: #ffffff; /* Blanco puro */
+  --color-hover-nav: #ff6bcd; /* Rosa en hover */
 }
 
 body {
