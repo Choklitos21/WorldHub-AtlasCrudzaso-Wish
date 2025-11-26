@@ -27,39 +27,28 @@ body {
 
 /* Color scheme */
 .color-1 {
-  color: #8fbc8f;
+    color: #8fbc8f;
 }
 .color-2 {
-  color: #a9d18f;
+    color: #a9d18f;
 }
 .color-3 {
-  color: #c2e0a4;
+    color: #c2e0a4;
 }
 .color-4 {
-  color: #e4f2b1;
+    color: #e4f2b1;
 }
 .color-5 {
-  color: #f1f8e2;
+    color: #f1f8e2;
 }
 
 /* CSS Variables */
 :root {
-  --color-1: #8fbc8f;
-  --color-2: #a9d18f;
-  --color-3: #c2e0a4;
-  --color-4: #e4f2b1;
-  --color-5: #f1f8e2;
-}
-
-:footer-colors {
-  --foot-1: #7fffd4;
-  --foot-2: #7fffd4;
-  --foot-3: #40e0d0;
-  --foot-4: #66cccc;
-}
-
-footer {
-  font-family: "Great Vibes", cursive;
+    --color-1: #8fbc8f;
+    --color-2: #a9d18f;
+    --color-3: #c2e0a4;
+    --color-4: #e4f2b1;
+    --color-5: #f1f8e2;
 }
 
 .fairies-icon-title {
