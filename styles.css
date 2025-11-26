@@ -28,6 +28,22 @@
   color: #f1f8e2;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+        minmax(200px, 1fr));
+    grid-gap: 10px
+}
+
+.grid > div {
+    font-size: 20px;
+    padding: 1px;
+    text-align: center;
+    /*  border: 5px solid;
+    border-radius: 10px;*/
+    
+}
+
 /* CSS Variables */
 :root {
   --color-1: #8fbc8f;
