@@ -1,13 +1,3 @@
-html,
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: var(--color-5);
-}
-
 /* Fonts */
 .set-text-font {
     font-family: "Delius", cursive;
@@ -40,18 +30,6 @@ body {
 .color-5 {
     color: #f1f8e2;
 }
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    width: 80%;
-}
-
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }}
 
 /* CSS Variables */
 :root {
@@ -129,7 +107,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}   
+}
 
 .fairy-card {
     display: flex;
@@ -445,5 +423,25 @@ body {
     .footer-integrantes span {
         margin-right: 0;
         margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .flip-card {
+        width: 45%;
+        max-width: 600px;
+    }
+    .flip-card:last-child {
+        width: 90%;
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .flip-grid {
+        gap: 30px;
+    }
+    .flip-card, .flip-card:last-child {
+        width: 90%;
+        height: 350px;
     }
 }
