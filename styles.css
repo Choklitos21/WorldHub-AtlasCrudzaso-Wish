@@ -1,3 +1,16 @@
+body {
+    display: flex;
+    /* 2. Define la dirección (opcional, por defecto es fila) */
+    flex-direction: column;
+    /* 3. Centra el contenido horizontalmente (eje principal) */
+    align-items: center;
+    /* 5. Asegura que el body ocupe todo el alto de la ventana */
+    min-height: 100vh;
+    /* Opcional: Elimina los márgenes predeterminados del body */
+    margin: 0;
+}
+
+
 /* Fonts */
 .set-text-font {
     font-family: "Delius", cursive;
@@ -9,23 +22,24 @@
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
+    color: var(--color-1);
 }
 
 /* Color scheme */
 .color-1 {
-  color: #8fbc8f;
+    color: #8fbc8f;
 }
 .color-2 {
-  color: #a9d18f;
+    color: #a9d18f;
 }
 .color-3 {
-  color: #c2e0a4;
+    color: #c2e0a4;
 }
 .color-4 {
-  color: #e4f2b1;
+    color: #e4f2b1;
 }
 .color-5 {
-  color: #f1f8e2;
+    color: #f1f8e2;
 }
 
 .grid {
@@ -62,20 +76,43 @@ article  .set-titles-font {
 
 /* CSS Variables */
 :root {
-  --color-1: #8fbc8f;
-  --color-2: #a9d18f;
-  --color-3: #c2e0a4;
-  --color-4: #e4f2b1;
-  --color-5: #f1f8e2;
+    --color-1: #8fbc8f;
+    --color-2: #a9d18f;
+    --color-3: #c2e0a4;
+    --color-4: #e4f2b1;
+    --color-5: #f1f8e2;
 }
 
-:footer-colors {
-  --foot-1: #7fffd4;
-  --foot-2: #7fffd4;
-  --foot-3: #40e0d0;
-  --foot-4: #66cccc;
+.fairies-icon-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-footer {
-  font-family: "Great Vibes", cursive;
+.fairies-icon-title img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
 }
+
+.articles-style {
+    width: 85%;
+}
+
+.articles-style div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles-style div div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.articles-style h1 {
+    text-align: left;
+}
+
+
