@@ -1,21 +1,32 @@
 html,
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  width: 100%;
+  background-color: var(--color-5);
+}
+/* html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
-}
-
+} */
 /* Fonts */
 .set-text-font {
   font-family: "Delius", cursive;
+  font-size: 20px;
   font-weight: 400;
   font-style: normal;
 }
 
 .set-titles-font {
   font-family: "Great Vibes", cursive;
+  font-size: 80px;
   font-weight: 400;
   font-style: normal;
   color: var(--color-1);
@@ -38,6 +49,19 @@ body {
   color: #f1f8e2;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 70px;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* CSS Variables */
 :root {
   --color-1: #8fbc8f;
@@ -45,6 +69,8 @@ body {
   --color-3: #c2e0a4;
   --color-4: #e4f2b1;
   --color-5: #f1f8e2;
+  --color-text-nav: #ffffff; /* Blanco puro */
+  --color-hover-nav: #ff6bcd; /* Rosa en hover */
 }
 
 .fairies-icon-title {
@@ -67,27 +93,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .articles-style div div {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  border: unset;
+}
+
+.articles-style div img {
+  border-radius: 10px;
 }
 
 .articles-style h1 {
   text-align: left;
-}
-
-/* --- ESTILOS GLOBALES --- */
-:root {
-  --color-text-nav: #ffffff; /* Blanco puro */
-  --color-hover-nav: #ff6bcd; /* Rosa en hover */
-}
-
-body {
-  background: none;
-  font-family: "Delius", cursive;
 }
 
 /* --- HEADER Y GUIRNALDA --- */
@@ -151,7 +176,7 @@ body {
   text-align: center;
 }
 
-.set-titles-font {
+/* .set-titles-font {
   font-family: "Great Vibes", cursive;
   font-size: 3rem;
   margin-bottom: 20px;
@@ -161,7 +186,7 @@ body {
   font-family: "Delius", cursive;
   font-size: 1.1rem;
   line-height: 1.6;
-}
+} */
 
 /* ========== RESPONSIVE DESIGN ========== */
 
@@ -244,6 +269,7 @@ body {
   padding: 40px 20px 20px;
   margin-top: 60px;
   text-align: center;
+  width: 100%;
 }
 
 .fairy-footer h3 {
@@ -319,4 +345,136 @@ body {
     margin-right: 0;
     margin-bottom: 5px;
   }
+}
+s
+
+/* ========== CARDS ANIMATION ========== */
+.fairies-icon-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fairies-icon-title img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.articles-style {
+  width: 85%;
+}
+
+.articles-style div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.articles-style div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: unset;
+}
+
+.articles-style div img {
+  border-radius: 10px;
+}
+
+.articles-style h1 {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.grid div {
+  font-size: 9px;
+  padding: 1px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid div:hover {
+  /* El efecto suave ocurre gracias a la línea de arriba */
+  transform: scale(1.05);
+}
+
+.grid div h4 {
+  margin-top: 20px;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.article-vero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fairy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-style {
+  border-radius: 10px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 400px;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #f1f8e2;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: #f1f8e2;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
