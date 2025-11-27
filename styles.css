@@ -1,49 +1,270 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--color-5);
+}
+
 /* Fonts */
 .set-text-font {
     font-family: "Delius", cursive;
+    font-size: 20px;
     font-weight: 400;
     font-style: normal;
 }
 
 .set-titles-font {
     font-family: "Great Vibes", cursive;
+    font-size: 60px;
     font-weight: 400;
     font-style: normal;
+    color: var(--color-1);
 }
 
 /* Color scheme */
 .color-1 {
-  color: #8fbc8f;
+    color: #8fbc8f;
 }
 .color-2 {
-  color: #a9d18f;
+    color: #a9d18f;
 }
 .color-3 {
-  color: #c2e0a4;
+    color: #c2e0a4;
 }
 .color-4 {
-  color: #e4f2b1;
+    color: #e4f2b1;
 }
 .color-5 {
-  color: #f1f8e2;
+    color: #f1f8e2;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }}
+
+article .set-titles-font {
+    font-size: 50px;
+    /*  border: 5px solid;
+    border-radius: 10px;*/    
+}
+
 
 /* CSS Variables */
 :root {
-  --color-1: #8fbc8f;
-  --color-2: #a9d18f;
-  --color-3: #c2e0a4;
-  --color-4: #e4f2b1;
-  --color-5: #f1f8e2;
+    --color-1: #8fbc8f;
+    --color-2: #a9d18f;
+    --color-3: #c2e0a4;
+    --color-4: #e4f2b1;
+    --color-5: #f1f8e2;
 }
 
-:footer-colors {
-  --foot-1: #7fffd4;
-  --foot-2: #7fffd4;
-  --foot-3: #40e0d0;
-  --foot-4: #66cccc;
+.fairies-icon-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-footer {
-  font-family: "Great Vibes", cursive;
+.fairies-icon-title img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.articles-style {
+    width: 85%;
+}
+
+.articles-style div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.articles-style div div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: unset;
+}
+
+
+.articles-style div img{
+    border-radius: 10px;
+}
+
+.articles-style h1 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.grid div {
+    font-size: 9px;
+    padding: 1px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid div:hover {
+    /* El efecto suave ocurre gracias a la línea de arriba */
+    transform: scale(1.05);
+}
+
+.grid div h4{
+    font-size: 40px;
+    margin: 5px;
+}
+
+.article-vero {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.img-style {
+    border-radius: 10px;
+}
+
+.fairy-system{ animation: fadeInSection 1.5s ease forwards; }
+.title-glow { animation: glow 3s infinite alternate; }
+.soft-fade { animation: floatText 6s ease-in-out infinite; }
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px var(--color-1); }
+    to { text-shadow: 0 0 20px var(--color-2), 0 0 40px var(--color-3); }
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nuevo Keyframe para las Cartas (Sutilmente más suave) */
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); } /* Flota 4px para las cartas */
+}
+
+
+/* ======================================================= */
+/* 3. FLIP CARD SYSTEM (Cartas Grandes y Flotantes) */
+/* ======================================================= */
+
+/* 1. Contenedor Principal (Distribución) */
+.flip-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    gap: 35px; 
+    width: 95%; 
+    max-width: 1400px; 
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    perspective: 1200px;
+}
+
+/* 2. Contenedor Individual (Tamaño y Animación Flotante) */
+.flip-card {
+    width: 380px; 
+    height: 250px; 
+    background-color: transparent;
+    transition: transform 0.6s;
+    /* Aplicar la animación flotante a todas las cartas */
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+/* Efecto de Oleaje: Da un ligero desfase a la animación de cada carta */
+.flip-card:nth-child(2) { animation-delay: 1s; }
+.flip-card:nth-child(3) { animation-delay: 2s; }
+.flip-card:nth-child(4) { animation-delay: 0.5s; }
+.flip-card:nth-child(5) { animation-delay: 1.5s; }
+
+
+/* 3. Contenedor Interno (Mecanismo 3D) */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(143, 188, 143, 0.4);
+}
+
+/* Volteo al hacer hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* 4. Caras Frontal y Trasera (Apariencia) */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del Frente */
+.flip-card-front {
+    background: linear-gradient(160deg, var(--color-4) 30%, var(--color-5) 90%);
+    color: var(--color-1);
+}
+.flip-card-front span {
+    font-size: 60px; 
+    line-height: 1;
+}
+.flip-card-front h4 {
+    font-family: "Great Vibes", cursive;
+    font-size: 48px; 
+    margin: 10px 0 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de la Parte Trasera */
+.flip-card-back {
+    background: linear-gradient(20deg, var(--color-2), var(--color-3));
+    color: #4b694b;
+    transform: rotateY(180deg);
+    text-align: left;
+    font-size: 16px;
+}
+
+.flip-card-back p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.flip-card-back strong {
+    color: #4b694b;
+    font-weight: bold;
 }
