@@ -1,25 +1,23 @@
 body {
     display: flex;
-    /* 2. Define la dirección (opcional, por defecto es fila) */
     flex-direction: column;
-    /* 3. Centra el contenido horizontalmente (eje principal) */
     align-items: center;
-    /* 5. Asegura que el body ocupe todo el alto de la ventana */
     min-height: 100vh;
-    /* Opcional: Elimina los márgenes predeterminados del body */
     margin: 0;
+    background-color: var(--color-5);
 }
-
 
 /* Fonts */
 .set-text-font {
     font-family: "Delius", cursive;
+    font-size: 20px;
     font-weight: 400;
     font-style: normal;
 }
 
 .set-titles-font {
     font-family: "Great Vibes", cursive;
+    font-size: 60px;
     font-weight: 400;
     font-style: normal;
     color: var(--color-1);
@@ -65,22 +63,33 @@ body {
 
 .articles-style {
     width: 85%;
+
 }
 
 .articles-style div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*border: 3px solid var(--color-1);*/
+    border-radius: 15px;
+    margin: 20px;
+    padding: 10px;
+    /*background-color: var(--color-5);*/
 }
 
 .articles-style div div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    border: unset;
 }
 
 .articles-style h1 {
     text-align: left;
+    margin: 0;
+    padding: 0;
 }
 
 
