@@ -106,7 +106,6 @@ article .set-titles-font {
     border: unset;
 }
 
-
 .articles-style div img{
     border-radius: 10px;
 }
@@ -125,7 +124,6 @@ article .set-titles-font {
 }
 
 .grid div:hover {
-    /* El efecto suave ocurre gracias a la línea de arriba */
     transform: scale(1.05);
 }
 
@@ -137,7 +135,6 @@ article .set-titles-font {
 .article-vero {
     display: flex;
     flex-direction: column;
-
     align-items: center;
 }
 
@@ -164,16 +161,14 @@ article .set-titles-font {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Nuevo Keyframe para las Cartas (Sutilmente más suave) */
 @keyframes floatCard {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); } /* Flota 4px para las cartas */
+    50% { transform: translateY(-4px); } 
 }
 
 .flip-grid {
     display: flex;
     flex-wrap: wrap; 
-    
     justify-content: center; 
     gap: 40px; 
     width: 95%; 
@@ -182,7 +177,6 @@ article .set-titles-font {
     margin-bottom: 30px; 
     perspective: 1200px;
 }
-
 
 .flip-card {
     width: 600px; 
@@ -194,21 +188,16 @@ article .set-titles-font {
 
 
 .flip-card:last-child {
-    width: 800px;
-    height: 400px; 
+    width: 800px; 
+    height: 300px; 
     margin-left: auto;
     margin-right: auto;
     animation-delay: 0s !important; 
 }
 
-
-
 .flip-card:nth-child(2) { animation-delay: 1s; }
 .flip-card:nth-child(3) { animation-delay: 2s; }
 .flip-card:nth-child(4) { animation-delay: 0.5s; }
-
-
-
 
 .flip-card-inner {
     position: relative;
@@ -221,11 +210,9 @@ article .set-titles-font {
     box-shadow: 0 5px 20px rgba(143, 188, 143, 0.4);
 }
 
-
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
-
 
 .flip-card-front, .flip-card-back {
     position: absolute;
@@ -238,10 +225,9 @@ article .set-titles-font {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; 
+    justify-content: center; 
     align-items: center;
 }
-
 
 .flip-card-front {
     background: linear-gradient(160deg, var(--color-4) 30%, var(--color-5) 90%);
@@ -255,42 +241,32 @@ article .set-titles-font {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-
 .flip-card-back {
     background-color: var(--color-2); 
     color: var(--color-5); 
     transform: rotateY(180deg);
-    text-align: left; 
+    text-align: center; 
     font-size: 18px; 
     padding: 30px; 
-   
-    align-items: flex-start; 
+    align-items: center; 
+    justify-content: center;
 }
-
-
-.flip-card-back h4 {
-    font-family: "Great Vibes", cursive;
-    font-size: 40px; 
-    color: var(--color-1); 
-    margin-top: 0;
-    margin-bottom: 20px; 
-    text-align: center; 
-}
-
 
 .flip-card-back ul {
     list-style-type: none; 
     padding: 0;
     margin: 0;
-    width: 100%; 
+    width: 85%; 
+    text-align: left;
 }
-
 
 .flip-card-back ul li {
     position: relative;
-    padding-left: 25px; 
+    padding-left: 20px; 
     margin-bottom: 10px; 
     line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word; 
 }
 
 .flip-card-back ul li::before {
@@ -302,13 +278,10 @@ article .set-titles-font {
     font-size: 1.1em;
 }
 
-
 .flip-card-back strong {
     color: var(--color-4); 
     font-weight: bold;
 }
-
-
 
 @media (max-width: 1250px) {
     .flip-card, .flip-card:last-child {
@@ -320,11 +293,13 @@ article .set-titles-font {
     .flip-grid {
         gap: 30px;
     }
-    .flip-card, .flip-card:last-child {
+    .flip-card {
         width: 90%;
         height: 350px; 
     }
+   
     .flip-card:last-child {
-        height: 400px; 
+        width: 90%; 
+        height: 350px; 
     }
 }
