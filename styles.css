@@ -21,6 +21,10 @@ body {
     font-weight: 400;
     font-style: normal;
     color: var(--color-1);
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; 
+    line-height: 1.5;
 }
 
 /* Color scheme */
@@ -166,17 +170,12 @@ article .set-titles-font {
     50% { transform: translateY(-4px); } /* Flota 4px para las cartas */
 }
 
-
-/* ======================================================= */
-/* 3. FLIP CARD SYSTEM (Cartas Grandes y Flotantes) */
-/* ======================================================= */
-
-/* 1. Contenedor Principal (Distribución) */
 .flip-grid {
     display: flex;
     flex-wrap: wrap; 
-    justify-content: space-evenly;
-    gap: 35px; 
+    
+    justify-content: center; 
+    gap: 40px; 
     width: 95%; 
     max-width: 1400px; 
     margin-top: 30px;
@@ -184,24 +183,33 @@ article .set-titles-font {
     perspective: 1200px;
 }
 
-/* 2. Contenedor Individual (Tamaño y Animación Flotante) */
+
 .flip-card {
-    width: 380px; 
-    height: 250px; 
+    width: 600px; 
+    height: 300px; 
     background-color: transparent;
     transition: transform 0.6s;
-    /* Aplicar la animación flotante a todas las cartas */
-    animation: floatCard 6s ease-in-out infinite;
+    animation: floatCard 6s ease-in-out infinite; 
 }
 
-/* Efecto de Oleaje: Da un ligero desfase a la animación de cada carta */
+
+.flip-card:last-child {
+    width: 800px;
+    height: 400px; 
+    margin-left: auto;
+    margin-right: auto;
+    animation-delay: 0s !important; 
+}
+
+
+
 .flip-card:nth-child(2) { animation-delay: 1s; }
 .flip-card:nth-child(3) { animation-delay: 2s; }
 .flip-card:nth-child(4) { animation-delay: 0.5s; }
-.flip-card:nth-child(5) { animation-delay: 1.5s; }
 
 
-/* 3. Contenedor Interno (Mecanismo 3D) */
+
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -213,12 +221,12 @@ article .set-titles-font {
     box-shadow: 0 5px 20px rgba(143, 188, 143, 0.4);
 }
 
-/* Volteo al hacer hover */
+
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* 4. Caras Frontal y Trasera (Apariencia) */
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -230,41 +238,93 @@ article .set-titles-font {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly; 
     align-items: center;
 }
 
-/* Estilo del Frente */
+
 .flip-card-front {
     background: linear-gradient(160deg, var(--color-4) 30%, var(--color-5) 90%);
     color: var(--color-1);
 }
-.flip-card-front span {
-    font-size: 60px; 
-    line-height: 1;
-}
+
 .flip-card-front h4 {
     font-family: "Great Vibes", cursive;
-    font-size: 48px; 
+    font-size: 55px; 
     margin: 10px 0 0;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo de la Parte Trasera */
+
 .flip-card-back {
-    background: linear-gradient(20deg, var(--color-2), var(--color-3));
-    color: #4b694b;
+    background-color: var(--color-2); 
+    color: var(--color-5); 
     transform: rotateY(180deg);
-    text-align: left;
-    font-size: 16px;
+    text-align: left; 
+    font-size: 18px; 
+    padding: 30px; 
+   
+    align-items: flex-start; 
 }
 
-.flip-card-back p {
-    margin: 5px 0;
+
+.flip-card-back h4 {
+    font-family: "Great Vibes", cursive;
+    font-size: 40px; 
+    color: var(--color-1); 
+    margin-top: 0;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+
+.flip-card-back ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+}
+
+
+.flip-card-back ul li {
+    position: relative;
+    padding-left: 25px; 
+    margin-bottom: 10px; 
     line-height: 1.4;
 }
 
-.flip-card-back strong {
-    color: #4b694b;
+.flip-card-back ul li::before {
+    content: '+'; 
+    position: absolute;
+    left: 0;
+    color: var(--color-1); 
     font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+.flip-card-back strong {
+    color: var(--color-4); 
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 1250px) {
+    .flip-card, .flip-card:last-child {
+        width: 80%;
+        max-width: 600px;
+    }
+}
+@media (max-width: 768px) {
+    .flip-grid {
+        gap: 30px;
+    }
+    .flip-card, .flip-card:last-child {
+        width: 90%;
+        height: 350px; 
+    }
+    .flip-card:last-child {
+        height: 400px; 
+    }
 }
