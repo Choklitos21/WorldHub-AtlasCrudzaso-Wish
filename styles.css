@@ -6,7 +6,9 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: var(--color-5);
+    /* cursor: url("media/images/magic-wand.ico") 10,10, auto; */
 }
+
 
 /* Fonts */
 .set-text-font {
@@ -144,7 +146,7 @@ body {
 .flip-box {
     background-color: transparent;
     width: 100%;
-    height: 300px;
+    height: 350px;
     perspective: 1000px;
     overflow: hidden; 
     position: relative;
@@ -166,9 +168,10 @@ body {
 .flip-box-front, .flip-box-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 350px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    border-radius: 10px;
 }
 
 .flip-box-front {
@@ -179,10 +182,23 @@ body {
     transform: rotateY(180deg);
 }
 
+@media (max-width: 768px) {
+    .flip-box-back {
+        width:100%; 
+        height: 280px;
+    }}
+
+@media (max-width: 480px) {
+    flip-box-back {
+        width:100%; 
+        height: 280px;
+    }}
+
 .gif {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .articles-style div div {
@@ -597,4 +613,8 @@ body {
         width: 90%;
         height: 350px;
     }
+}
+
+body{
+    cursor: url("media/images/magic-wand.ico") 10 10, auto !important;
 }
