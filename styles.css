@@ -760,6 +760,130 @@ body {
   color: #1a1f1a;
 }
 
+/* ====== CAROUSEL BASE ====== */
+.races-carousel {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+
+.races-carousel input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.race-card {
+  background: var(--color-5);
+  border: 2px solid var(--color-2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #2f3f2f;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls label {
+  width: 14px;
+  height: 14px;
+  background: var(--color-3);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls label:hover {
+  background: var(--color-1);
+}
+
+#race-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#race-2:checked ~ .slides {
+  transform: translateX(-33.333%);
+}
+
+#race-3:checked ~ .slides {
+  transform: translateX(-66.666%);
+}
+
+.races-carousel .slides {
+  animation: carouselSlide 9s infinite;
+}
+
+@keyframes carouselSlide {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+
+  35% {
+    transform: translateX(-33.333%);
+  }
+  60% {
+    transform: translateX(-33.333%);
+  }
+
+  70% {
+    transform: translateX(-66.666%);
+  }
+  95% {
+    transform: translateX(-66.666%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 768px) {
+  .races-carousel .slides {
+    animation: carouselSlideMobile 12s infinite;
+  }
+
+  @keyframes carouselSlideMobile {
+    0%,
+    20% {
+      transform: translateX(0%);
+    }
+    25%,
+    45% {
+      transform: translateX(-100%);
+    }
+    50%,
+    70% {
+      transform: translateX(-200%);
+    }
+    80%,
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .slide {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   /* Fondo general */
   body {
@@ -770,6 +894,21 @@ body {
   ::selection {
     background: var(--color-1);
     color: #0d0f0d;
+  }
+
+  .race-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid rgba(190, 240, 190, 0.25);
+    color: var(--color-4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .controls label {
+    background: var(--color-1);
+  }
+
+  .controls label:hover {
+    background: var(--color-2);
   }
 
   /* Textos */
@@ -817,21 +956,12 @@ body {
     color: var(--color-1);
   }
 
-  /* Aside */
-  /* ======= ASIDE MODO OSCURO (MISMA ESENCIA) ======= */
-
   .team-fairies,
   .fairy-aside {
-    background: rgba(
-      255,
-      255,
-      255,
-      0.07
-    ) !important; /* similar a modo claro, pero adaptado */
-    border: 2px solid rgba(200, 240, 200, 0.25); /* borde suave verde pastel */
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 2px solid rgba(200, 240, 200, 0.25);
     border-radius: 12px;
 
-    /* Sombra sutil, igual estilo del modo claro */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 
     color: var(--color-4) !important; /* texto claro pero suave */
@@ -839,17 +969,17 @@ body {
 
   .team-fairies h3,
   .fairy-aside h3 {
-    color: var(--color-3) !important; /* tono pastel igual que en claro */
-    text-shadow: none; /* como en el modo claro */
+    color: var(--color-3) !important;
+    text-shadow: none;
   }
 
   .team-fairies li,
   .fairy-aside li {
-    color: var(--color-4) !important; /* tono casi idéntico al claro */
+    color: var(--color-4) !important;
   }
 
   .fav-fairy strong {
-    color: var(--color-2) !important; /* destaca igual que en modo claro */
+    color: var(--color-2) !important;
   }
 
   .fairy-aside p {
@@ -871,5 +1001,22 @@ body {
 
   .fairy-footer p {
     color: #ffffffcc;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .race-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(180, 230, 180, 0.3);
+      color: var(--color-4);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .controls label {
+      background: var(--color-1);
+    }
+
+    .controls label:hover {
+      background: var(--color-2);
+    }
   }
 }
