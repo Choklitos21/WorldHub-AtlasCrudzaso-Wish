@@ -6,9 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: var(--color-5);
-    /* cursor: url("media/images/magic-wand.ico") 10,10, auto; */
 }
-
 
 /* Fonts */
 .set-text-font {
