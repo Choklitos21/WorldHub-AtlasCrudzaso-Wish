@@ -6,7 +6,9 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: var(--color-5);
+    /* cursor: url("media/images/magic-wand.ico") 10,10, auto; */
 }
+
 
 /* Fonts */
 .set-text-font {
@@ -163,55 +165,59 @@ body {
 .flip-box {
     background-color: transparent;
     width: 100%;
-    height: 300px;
+    height: 350px;
     perspective: 1000px;
+    overflow: hidden; 
+    position: relative;
 }
 
-/* This container is needed to position the front and back side */
 .flip-box-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
     transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-box-front, .flip-box-back {
     position: absolute;
     width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    height: 350px;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 10px;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-box-front {
     background-color: #f1f8e2;
-    color: black;
 }
 
-/* Style the back side */
 .flip-box-back {
-    background-color: #f1f8e2;
-    color: white;
     transform: rotateY(180deg);
 }
+
+@media (max-width: 768px) {
+    .flip-box-back {
+        width:100%; 
+        height: 280px;
+    }}
+
+@media (max-width: 480px) {
+    flip-box-back {
+        width:100%; 
+        height: 280px;
+    }}
 
 .gif {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .articles-style div div {
@@ -607,4 +613,8 @@ body {
         width: 90%;
         height: 350px;
     }
+}
+
+body{
+    cursor: url("media/images/magic-wand.ico") 10 10, auto !important;
 }
