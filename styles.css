@@ -6,12 +6,12 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--color-5);
-  /* cursor: url("media/images/magic-wand.ico") 10,10, auto; */
-
   scroll-behavior: smooth;
   overflow-x: hidden;
   opacity: 0;
   animation: fadeIn 1.4s ease-out forwards;
+
+  cursor: url("media/images/magic-wand.ico") 10 10, auto !important;
 }
 
 @keyframes fadeIn {
@@ -670,10 +670,6 @@ body {
   }
 }
 
-body {
-  cursor: url("media/images/magic-wand.ico") 10 10, auto !important;
-}
-
 .fairy-aside {
   background: linear-gradient(135deg, var(--color-5) 0%, var(--color-4) 100%);
   border-left: 5px solid var(--color-1);
@@ -751,11 +747,29 @@ body {
   background: linear-gradient(180deg, var(--color-2), var(--color-1));
 }
 
+.section-divider {
+  width: 80%;
+  margin: 40px auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-3), transparent);
+  border-radius: 10px;
+}
+
+::selection {
+  background: var(--color-2);
+  color: #1a1f1a;
+}
+
 @media (prefers-color-scheme: dark) {
   /* Fondo general */
   body {
     background-color: #232b0b !important;
     color: #e8f5e1;
+  }
+
+  ::selection {
+    background: var(--color-1);
+    color: #0d0f0d;
   }
 
   /* Textos */
