@@ -10,6 +10,19 @@ body {
 
   scroll-behavior: smooth;
   overflow-x: hidden;
+  opacity: 0;
+  animation: fadeIn 1.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Fonts */
@@ -736,4 +749,113 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--color-2), var(--color-1));
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Fondo general */
+  body {
+    background-color: #232b0b !important;
+    color: #e8f5e1;
+  }
+
+  /* Textos */
+  .set-text-font {
+    color: #dcefd9;
+  }
+
+  .set-titles-font {
+    color: var(--color-2);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  }
+
+  /* Tarjetas */
+  .flip-box-front {
+    background-color: #1b241b !important;
+  }
+
+  .flip-card-front {
+    background: linear-gradient(160deg, #3c450b 30%, #1f261f 90%) !important;
+    color: var(--color-4);
+  }
+
+  .flip-card-back {
+    background-color: #365a36 !important;
+  }
+
+  /* Footer */
+  .fairy-footer {
+    background: linear-gradient(135deg, #102010, #1c331c) !important;
+  }
+
+  .fairy-footer h3 {
+    color: var(--color-4);
+  }
+
+  .footer-links a,
+  .footer-members a,
+  .footer-integrantes a {
+    color: var(--color-3);
+  }
+
+  .footer-links a:hover,
+  .footer-members a:hover,
+  .footer-integrantes a:hover {
+    color: var(--color-1);
+  }
+
+  /* Aside */
+  /* ======= ASIDE MODO OSCURO (MISMA ESENCIA) ======= */
+
+  .team-fairies,
+  .fairy-aside {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.07
+    ) !important; /* similar a modo claro, pero adaptado */
+    border: 2px solid rgba(200, 240, 200, 0.25); /* borde suave verde pastel */
+    border-radius: 12px;
+
+    /* Sombra sutil, igual estilo del modo claro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+
+    color: var(--color-4) !important; /* texto claro pero suave */
+  }
+
+  .team-fairies h3,
+  .fairy-aside h3 {
+    color: var(--color-3) !important; /* tono pastel igual que en claro */
+    text-shadow: none; /* como en el modo claro */
+  }
+
+  .team-fairies li,
+  .fairy-aside li {
+    color: var(--color-4) !important; /* tono casi idéntico al claro */
+  }
+
+  .fav-fairy strong {
+    color: var(--color-2) !important; /* destaca igual que en modo claro */
+  }
+
+  .fairy-aside p {
+    color: #ffffffcc;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #161d16 !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      var(--color-1),
+      var(--color-2)
+    ) !important;
+    border: 2px solid #161d16 !important;
+  }
+
+  .fairy-footer p {
+    color: #ffffffcc;
+  }
 }
