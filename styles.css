@@ -7,6 +7,8 @@ body {
   margin: 0;
   background-color: var(--color-5);
   /* cursor: url("media/images/magic-wand.ico") 10,10, auto; */
+
+  scroll-behavior: smooth;
 }
 
 /* Fonts */
@@ -656,4 +658,62 @@ body {
 
 body {
   cursor: url("media/images/magic-wand.ico") 10 10, auto !important;
+}
+
+.fairy-aside {
+  background: linear-gradient(135deg, var(--color-5) 0%, var(--color-4) 100%);
+  border-left: 5px solid var(--color-1);
+  padding: 20px 25px;
+  border-radius: 10px;
+  margin: 40px auto;
+  width: 80%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeInAside 1.2s ease;
+}
+
+.aside-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: var(--color-1);
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.fairy-aside p {
+  font-family: "Delius", cursive;
+  font-size: 1.1rem;
+  color: #2f452f;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+/* Animación suave */
+@keyframes fadeInAside {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.member-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fav-fairy {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: "Delius", cursive;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.fav-fairy strong {
+  color: var(--color-4);
 }
