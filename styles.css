@@ -200,7 +200,6 @@ body {
 .flip-box-back {
   position: absolute;
   width: 100%;
-  height: 350px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 10px;
