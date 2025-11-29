@@ -409,7 +409,6 @@ body {
   }
 }
 
-/* Pantallas muy pequeñas (hasta 360px) */
 @media (max-width: 360px) {
   .garland-container {
     background-size: 500px;
