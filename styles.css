@@ -176,7 +176,7 @@ body {
 .flip-box {
   background-color: transparent;
   width: 100%;
-  height: 400px;
+  height: 335px;
   perspective: 1000px;
   overflow: hidden;
   position: relative;
@@ -197,14 +197,14 @@ body {
 .flip-box-back {
   position: absolute;
   width: 100%;
-  height: 350px;
+  height: 300px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 10px;
 }
 
 .flip-box-front {
-  background-color: #232b0b;
+  background-color: var(--color-5);
 }
 
 .flip-box-back {
@@ -426,7 +426,7 @@ body {
 
 /* ========== FOOTER ========== */
 .fairy-footer {
-  background: linear-gradient(135deg, #2c003e 0%, #4a0072 100%);
+  background: var(--color-1);
   color: #fff;
   padding: 40px 20px 20px;
   margin-top: 60px;
@@ -437,7 +437,7 @@ body {
 .fairy-footer h3 {
   font-family: "Great Vibes", cursive;
   font-size: 2.5rem;
-  color: #ff6bcd;
+  color: var(--color-4);
   margin-bottom: 10px;
 }
 
@@ -459,7 +459,7 @@ body {
 .footer-links a,
 .footer-members a,
 .footer-integrantes a {
-  color: #ffd700;
+  color: var(--color-5);
   text-decoration: none;
   font-family: "Delius", cursive;
   transition: all 0.3s ease;
@@ -468,7 +468,7 @@ body {
 .footer-links a:hover,
 .footer-members a:hover,
 .footer-integrantes a:hover {
-  color: #ff6bcd;
+  color: var(--color-3);
   text-decoration: underline;
 }
 
@@ -1005,6 +1005,7 @@ body {
   body {
     background-color: #232b0b !important;
     color: #e8f5e1;
+      cursor: url("media/images/magic-wand-dark.ico") 10 10, auto !important;
   }
 
   ::selection {
