@@ -745,7 +745,37 @@ body {
     display: none;
   }
 
-  
+  #race-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#race-2:checked ~ .slides {
+  transform: translateX(-5);
+}
+
+#race-3:checked ~ .slides {
+  transform: translateX(-10);
+}
+
+#race-4:checked ~ .slides {
+  transform: translateX(-15);
+}
+
+#race-5:checked ~ .slides {
+  transform: translateX(-20);
+}
+
+#race-6:checked ~ .slides {
+  transform: translateX(-25);
+}
+
+#race-7:checked ~ .slides {
+  transform: translateX(-30);
+}
+
+
+
+
 }
 
 .aside-title {
@@ -917,10 +947,6 @@ body {
   transform: translateX(-85.8%);
 }
 
-.races-carousel .slides {
-  animation: carouselSlide 9s infinite;
-}
-
 /* @keyframes carouselSlide {
   0% {
     transform: translateX(0%);
@@ -949,9 +975,6 @@ body {
 } */
 
 @media (max-width: 768px) {
-  .races-carousel .slides {
-    animation: carouselSlideMobile 12s infinite;
-  }
 
   @keyframes carouselSlideMobile {
     0%,
@@ -1058,7 +1081,7 @@ body {
 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 
-    color: var(--color-4) !important; /* texto claro pero suave */
+    color: var(--color-4) !important; 
   }
 
   .team-fairies h3,
