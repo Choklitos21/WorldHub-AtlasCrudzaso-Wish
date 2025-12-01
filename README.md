@@ -158,7 +158,7 @@ out both styles__
 
 ## 💻 Team participation
 - 🐈 __Daniela Quinto Ríos__
-  - I created the "Veiled Code of Faerie" section using interactive flip-cards to present the system rules, symbolizing the Fae world's dual nature (surface vs. truth). My key contributions were the implementation of 3D card-flip transformations on hover and several ambient CSS animations (like glow and soft float) to achieve a magical, ethereal feel. The content defines seven core laws, including Court Hierarchy and the Law of the Deal, with each list containing at least five detailed rules to establish a robust, yet mystically structured, world logic.
+  - I have developed the **Faerie World System and Logic** section (titled "The Veiled Code of Faerie") by implementing a dynamic and magical visual presentation: instead of simple static lists, I utilized interactive **flip-cards** that rotate in 3D (`transform: rotateY(180deg)`) on hover, symbolizing the two-sided nature of the Fae world (a beautiful facade and a hidden truth). Aesthetically, I applied subtle CSS animations such as a **glow effect** on the main title, and **soft floating** animations (`floatText` and `floatCard`) on the introduction and individual cards to evoke an ethereal feel, along with color gradients on the card fronts. Finally, I structured the key world rules (like the Law of Belief, Court Hierarchy, and Law of the Deal), ensuring that each concept contains a clear list with at least five well-defined points, resulting in a rule system that is as enigmatic as it is functional.
 - 🐈‍⬛ __Verónica Martínez Cadavid__
   - Lorem
 - ☕ __Diego Morales Montoya__
@@ -174,6 +174,7 @@ out both styles__
   - Developed the automatic dark mode using prefers-color-scheme, customizing colors, backgrounds, glow effects, cursors, cards, and scrollbars to preserve the project’s magical aesthetic in both light and dark themes.
 
   - Provided technical support and optimization throughout the project, improving styles, refining HTML structure, and ensuring global consistency across components, animations, and layout behavior.
+
 
 
 
