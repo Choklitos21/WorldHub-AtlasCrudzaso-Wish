@@ -167,6 +167,13 @@ out both styles__
   - 
     Main work branches “feature/main” and “main.”
 - 🎧 __Sebastian Vargas Ramirez__
-  - Lorem
+  - Responsible for developing the main navigation bar, seamlessly integrating it with the decorative garland and ensuring smooth, consistent, and visually cohesive navigation across the site.
+
+  - Fully implemented the responsive footer, including its structure, links, member section, styles, and hover behavior — maintaining accessibility and visual harmony on both desktop and mobile devices.
+
+  - Developed the automatic dark mode using prefers-color-scheme, customizing colors, backgrounds, glow effects, cursors, cards, and scrollbars to preserve the project’s magical aesthetic in both light and dark themes.
+
+- Provided technical support and optimization throughout the project, improving styles, refining HTML structure, and ensuring global consistency across components, animations, and layout behavior.
+
 
 
