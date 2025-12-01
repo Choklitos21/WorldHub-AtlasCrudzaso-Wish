@@ -158,22 +158,38 @@ out both styles__
 
 ## 💻 Team participation
 - 🐈 __Daniela Quinto Ríos__
-  - I have developed the **Faerie World System and Logic** section (titled "The Veiled Code of Faerie") by implementing a dynamic and magical visual presentation: instead of simple static lists, I utilized interactive **flip-cards** that rotate in 3D (`transform: rotateY(180deg)`) on hover, symbolizing the two-sided nature of the Fae world (a beautiful facade and a hidden truth). Aesthetically, I applied subtle CSS animations such as a **glow effect** on the main title, and **soft floating** animations (`floatText` and `floatCard`) on the introduction and individual cards to evoke an ethereal feel, along with color gradients on the card fronts. Finally, I structured the key world rules (like the Law of Belief, Court Hierarchy, and Law of the Deal), ensuring that each concept contains a clear list with at least five well-defined points, resulting in a rule system that is as enigmatic as it is functional.
+  - I have developed the **Faerie World System and Logic** section (titled "The Veiled Code of Faerie") by implementing
+  - a dynamic and magical visual presentation: instead of simple static lists, I utilized interactive **flip-cards** 
+  - that rotate in 3D (`transform: rotateY(180deg)`) on hover, symbolizing the two-sided nature of the Fae world 
+  - (a beautiful facade and a hidden truth). Aesthetically, I applied subtle CSS animations such as a **glow effect** 
+  - on the main title, and **soft floating** animations (`floatText` and `floatCard`) on the introduction and individual
+  - cards to evoke an ethereal feel, along with color gradients on the card fronts. Finally, I structured the key world 
+  - rules (like the Law of Belief, Court Hierarchy, and Law of the Deal), ensuring that each concept contains a clear 
+  - list with at least five well-defined points, resulting in a rule system that is as enigmatic as it is functional.
 - 🐈‍⬛ __Verónica Martínez Cadavid__
-  - Lorem
+  - I developed the “Fairy Types Grid” section, which showcases each faerie category with its corresponding description 
+  - and image. To give the page a lively and whimsical touch, I implemented an image-rotation animation that reveals a 
+  - unique GIF on each card. Additionally, I ensured that the entire section was fully responsive across different 
+  - screen sizes, adapting the interaction so that on smaller devices—such as mobile phones—the GIF is revealed with a 
+  - sustained tap instead of a rotation. Finally, I customized the desktop experience by designing a magic-wand cursor 
+  - to enhance the site’s enchanted aesthetic.
 - ☕ __Diego Morales Montoya__
   - In charge of the “main” section, general styles for sections and articles.
     Responsible for merging branches so that they work correctly (when God wanted to help).
   - 
     Main work branches “feature/main” and “main.”
 - 🎧 __Sebastian Vargas Ramirez__
-  - Responsible for developing the main navigation bar, seamlessly integrating it with the decorative garland and ensuring smooth, consistent, and visually cohesive navigation across the site.
+  - Responsible for developing the main navigation bar, seamlessly integrating it with the decorative garland and 
+  - ensuring smooth, consistent, and visually cohesive navigation across the site.
 
-  - Fully implemented the responsive footer, including its structure, links, member section, styles, and hover behavior — maintaining accessibility and visual harmony on both desktop and mobile devices.
+  - Fully implemented the responsive footer, including its structure, links, member section, styles, and hover behavior 
+  - — maintaining accessibility and visual harmony on both desktop and mobile devices.
 
-  - Developed the automatic dark mode using prefers-color-scheme, customizing colors, backgrounds, glow effects, cursors, cards, and scrollbars to preserve the project’s magical aesthetic in both light and dark themes.
+  - Developed the automatic dark mode using prefers-color-scheme, customizing colors, backgrounds, glow effects, 
+  - cursors, cards, and scrollbars to preserve the project’s magical aesthetic in both light and dark themes.
 
-  - Provided technical support and optimization throughout the project, improving styles, refining HTML structure, and ensuring global consistency across components, animations, and layout behavior.
+  - Provided technical support and optimization throughout the project, improving styles, refining HTML structure,
+  - and ensuring global consistency across components, animations, and layout behavior.
 
 
 
