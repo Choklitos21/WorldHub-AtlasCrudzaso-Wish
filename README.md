@@ -173,7 +173,8 @@ out both styles__
 
   - Developed the automatic dark mode using prefers-color-scheme, customizing colors, backgrounds, glow effects, cursors, cards, and scrollbars to preserve the project’s magical aesthetic in both light and dark themes.
 
-- Provided technical support and optimization throughout the project, improving styles, refining HTML structure, and ensuring global consistency across components, animations, and layout behavior.
+  - Provided technical support and optimization throughout the project, improving styles, refining HTML structure, and ensuring global consistency across components, animations, and layout behavior.
+
 
 
 
