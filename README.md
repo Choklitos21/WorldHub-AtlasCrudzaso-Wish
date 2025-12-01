@@ -158,7 +158,7 @@ out both styles__
 
 ## 💻 Team participation
 - 🐈 __Daniela Quinto Ríos__
-  - Lorem
+  - I have developed the Faerie World System and Logic section (titled "The Veiled Code of Faerie") by implementing a dynamic and magical visual presentation: instead of simple static lists, I utilized interactive flip-cards that rotate in 3D (transform: rotateY(180deg)) on hover, symbolizing the two-sided nature of the Fae world (a beautiful facade and a hidden truth). Aesthetically, I applied subtle CSS animations such as a glow effect on the main title, and soft floating animations (floatText and floatCard) on the introduction and individual cards to evoke an ethereal feel, along with color gradients on the card fronts. Finally, I structured the key world rules (like the Law of Belief, Court Hierarchy, and Law of the Deal), ensuring that each concept contains a clear list with at least five well-defined points, resulting in a rule system that is as enigmatic as it is functional.
 - 🐈‍⬛ __Verónica Martínez Cadavid__
   - Lorem
 - ☕ __Diego Morales Montoya__
@@ -168,3 +168,4 @@ out both styles__
     Main work branches “feature/main” and “main.”
 - 🎧 __Sebastian Vargas Ramirez__
   - Lorem
+
