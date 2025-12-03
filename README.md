@@ -190,8 +190,3 @@ out both styles__
 
   - Provided technical support and optimization throughout the project, improving styles, refining HTML structure,
   - and ensuring global consistency across components, animations, and layout behavior.
-
-
-
-
-
